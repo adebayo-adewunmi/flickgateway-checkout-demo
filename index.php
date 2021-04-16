@@ -10,7 +10,7 @@
               <label for="exampleInputEmail1" class="form-label">Enter TopUp Amount</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
-            <button type="submit" class="btn btn-primary">Pay</button>
+            <button type="submit" class="btn btn-primary" onclick="loadIframe('',true);">Pay</button>
           </form>
     </body>
 </html>
