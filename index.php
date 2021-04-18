@@ -8,7 +8,7 @@
         <form class="m-5">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Enter TopUp Amount</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="number" class="form-control" id="amount">
             </div>
             <button type="button" class="btn btn-primary" id="payNow">Pay</button>
           </form>
@@ -17,7 +17,7 @@
               window.getpaidSetup({
                 customer_email:"tim@nikosce.com",
                 customer_firstname:"Clark",
-                amount:"98760",
+                amount:document.getElementById("amount").value,
                 txref:"MRS00000015646",
                 PBFPubKey:"FLWPUBK-4425a3df7cabd0c68ac0c78f201eddb7-X",
                 currency:"NGN",
