@@ -10,7 +10,24 @@
               <label for="exampleInputEmail1" class="form-label">Enter TopUp Amount</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
-            <button type="button" class="btn btn-primary" onclick="loadIframe('',true);">Pay</button>
+            <button type="button" class="btn btn-primary" id="payNow">Pay</button>
           </form>
+          <script>
+            document.getElementById("payNow").addEventListener("click", function(){
+              window.getpaidSetup({
+                customer_email:"tim@nikosce.com",
+                customer_firstname:"Clark",
+                amount:"98760",
+                txref:"MRS00000015646",
+                PBFPubKey:"FLWPUBK-4425a3df7cabd0c68ac0c78f201eddb7-X",
+                currency:"NGN",
+                country:"NG",
+                custom_title:"eShop",
+                custom_logo:"http://localhost:8080/img/mrs-logo.4622fcc2.png",
+                payment_options:"card,account",
+                init_url:"http://localhost:8080/topup.html"
+              });
+            });
+          </script>
     </body>
 </html>
